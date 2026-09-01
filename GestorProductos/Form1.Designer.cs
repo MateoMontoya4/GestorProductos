@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnAgregar = new Button();
             label1 = new Label();
@@ -58,6 +58,7 @@
             txtBuscar = new TextBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
+            btnExportar = new Button();
             ((System.ComponentModel.ISupportInitialize)dvgProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Bulldog).BeginInit();
@@ -73,7 +74,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Algerian", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = Color.Black;
-            btnAgregar.Location = new Point(482, 88);
+            btnAgregar.Location = new Point(482, 97);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(148, 35);
             btnAgregar.TabIndex = 0;
@@ -86,7 +87,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Showcard Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(188, 33);
+            label1.Location = new Point(202, 32);
             label1.Name = "label1";
             label1.Size = new Size(274, 36);
             label1.TabIndex = 1;
@@ -96,7 +97,7 @@
             // 
             txtNombre.BackColor = SystemColors.Window;
             txtNombre.ForeColor = Color.Fuchsia;
-            txtNombre.Location = new Point(39, 95);
+            txtNombre.Location = new Point(39, 100);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre";
             txtNombre.Size = new Size(157, 23);
@@ -106,7 +107,7 @@
             // txtStock
             // 
             txtStock.ForeColor = Color.FromArgb(0, 0, 192);
-            txtStock.Location = new Point(202, 95);
+            txtStock.Location = new Point(202, 100);
             txtStock.Name = "txtStock";
             txtStock.PlaceholderText = "Cantidad";
             txtStock.Size = new Size(127, 23);
@@ -117,7 +118,7 @@
             // 
             txtPrecio.BackColor = SystemColors.Window;
             txtPrecio.ForeColor = Color.FromArgb(255, 128, 0);
-            txtPrecio.Location = new Point(335, 95);
+            txtPrecio.Location = new Point(335, 100);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.PlaceholderText = "Precio";
             txtPrecio.Size = new Size(127, 23);
@@ -139,29 +140,29 @@
             // 
             dvgProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvgProductos.BackgroundColor = Color.FromArgb(255, 192, 255);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(128, 255, 128);
-            dataGridViewCellStyle5.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(255, 192, 255);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(128, 255, 128);
-            dataGridViewCellStyle5.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dvgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(128, 255, 128);
+            dataGridViewCellStyle1.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(128, 255, 128);
+            dataGridViewCellStyle1.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dvgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dvgProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvgProductos.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.PaleVioletRed;
-            dataGridViewCellStyle7.Font = new Font("Snap ITC", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dvgProductos.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.PaleVioletRed;
+            dataGridViewCellStyle3.Font = new Font("Snap ITC", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dvgProductos.DefaultCellStyle = dataGridViewCellStyle3;
             dvgProductos.GridColor = Color.Black;
             dvgProductos.Location = new Point(25, 213);
             dvgProductos.Name = "dvgProductos";
-            dataGridViewCellStyle8.BackColor = Color.HotPink;
-            dvgProductos.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = Color.HotPink;
+            dvgProductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dvgProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dvgProductos.Size = new Size(520, 181);
             dvgProductos.TabIndex = 7;
@@ -188,8 +189,8 @@
             // Column4
             // 
             Column4.DataPropertyName = "Precio";
-            dataGridViewCellStyle6.Format = "$ #,##0";
-            Column4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "$ #,##0";
+            Column4.DefaultCellStyle = dataGridViewCellStyle2;
             Column4.HeaderText = "PRECIO";
             Column4.Name = "Column4";
             // 
@@ -219,7 +220,7 @@
             labelErrorNombre.AutoSize = true;
             labelErrorNombre.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelErrorNombre.ForeColor = Color.Red;
-            labelErrorNombre.Location = new Point(25, 123);
+            labelErrorNombre.Location = new Point(25, 138);
             labelErrorNombre.Name = "labelErrorNombre";
             labelErrorNombre.Size = new Size(171, 15);
             labelErrorNombre.TabIndex = 10;
@@ -231,7 +232,7 @@
             labelErrorPrecio.AutoSize = true;
             labelErrorPrecio.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelErrorPrecio.ForeColor = Color.Red;
-            labelErrorPrecio.Location = new Point(335, 121);
+            labelErrorPrecio.Location = new Point(335, 136);
             labelErrorPrecio.Name = "labelErrorPrecio";
             labelErrorPrecio.Size = new Size(119, 17);
             labelErrorPrecio.TabIndex = 11;
@@ -243,7 +244,7 @@
             labelErrorStock.AutoSize = true;
             labelErrorStock.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelErrorStock.ForeColor = Color.Red;
-            labelErrorStock.Location = new Point(208, 121);
+            labelErrorStock.Location = new Point(202, 136);
             labelErrorStock.Name = "labelErrorStock";
             labelErrorStock.Size = new Size(115, 17);
             labelErrorStock.TabIndex = 12;
@@ -348,9 +349,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources._5d2a31a45fc74da07ff366b3e44b421f;
-            pictureBox2.Location = new Point(39, 12);
+            pictureBox2.Location = new Point(53, 1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(143, 79);
+            pictureBox2.Size = new Size(143, 93);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
@@ -358,12 +359,25 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(468, 12);
+            pictureBox3.Location = new Point(482, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(162, 79);
+            pictureBox3.Size = new Size(148, 90);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 21;
             pictureBox3.TabStop = false;
+            // 
+            // btnExportar
+            // 
+            btnExportar.BackColor = Color.Black;
+            btnExportar.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExportar.ForeColor = SystemColors.MenuBar;
+            btnExportar.Location = new Point(12, 415);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new Size(111, 34);
+            btnExportar.TabIndex = 22;
+            btnExportar.Text = "EXPORTAR";
+            btnExportar.UseVisualStyleBackColor = false;
+            btnExportar.Click += btnExportar_Click;
             // 
             // Form1
             // 
@@ -371,6 +385,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(691, 464);
+            Controls.Add(btnExportar);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(txtBuscar);
@@ -431,5 +446,6 @@
         private DataGridViewTextBoxColumn Column4;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Button btnExportar;
     }
 }

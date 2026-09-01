@@ -243,5 +243,33 @@ namespace GestorProductos
             dvgProductos.DataSource = null;
             dvgProductos.DataSource = lista;
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog guardar = new SaveFileDialog(); //ese savefiledialog pregunta donde lo quiere guardar
+
+            guardar.FileName = "productos.txt"; //el nombre del archivo
+
+            guardar.Filter = "Archivo de texto (*.txt)|*.txt"; //permitimos guardar solo txt
+
+            
+            if(guardar.ShowDialog() == DialogResult.OK) //esto abre la ventana donde lo quiere guardar
+            {
+                var lista = _controller.ObtenerTodos(); //la lista de produ
+
+                string contenido = "LISTA DE PRODUCTOS\n\n"; //el conte del archivo
+
+                foreach(Producto p in lista)
+                {
+                    contenido += $"ID: {p.Id}\n"; contenido += $"Nombre: {p.Nombre}\n"; contenido += $"Precio: ${p.Precio}\n"; contenido += $"Stock: {p.Stock}\n\n";
+                }
+
+                // Guardamos el archivo
+                File.WriteAllText(guardar.FileName, contenido);
+
+                MessageBox.Show("Producto extraidos correctamente!!!"); //le avisame q termino
+            }
+
+        }
     }
 }
