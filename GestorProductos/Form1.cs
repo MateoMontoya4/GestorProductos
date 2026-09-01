@@ -136,7 +136,7 @@ namespace GestorProductos
             }
 
 
-            pictureProductos.Visible = true; // muestra la imagen q puse
+            Bulldog.Visible = true; // muestra la imagen q puse
         }
 
         // Devuelve el producto que seleccionamos en la tabla
@@ -195,7 +195,7 @@ namespace GestorProductos
 
         private void ActualizarBotones()//cambia los botones depende si estamos editando
         {
-            btnAgregar.Text = _modoEdicion ? "Guardar cambios" : "Agregar"; // Si estamos editando, cambia el botón a "Guardar cambios si no, queda como "Agregar"
+            btnAgregar.Text = _modoEdicion ? "GUARDAR " : "Agregar"; // Si estamos editando, cambia el botón a "Guardar cambios si no, queda como "Agregar"
             btnCancelar.Visible = _modoEdicion; // Muestra Cancelar solo cuando estamos editando
             btnEditar.Enabled = !_modoEdicion;  // Desactiva Editar mientras estamos editando
         }
@@ -213,6 +213,35 @@ namespace GestorProductos
             LimpiarCampos();
         }
 
-        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // Agarramos lo que escribió el usuario
+            string texto = txtBuscar.Text.Trim();
+
+            // Si no escribió nada, mostramos un aviso
+            if (string.IsNullOrEmpty(texto))
+            {
+                MessageBox.Show("Escribí un producto para buscar.");
+                txtBuscar.Focus();
+                return;
+            }
+
+            // Buscamos los productos por nombre
+            var lista = _controller.ObtenerTodos()
+                .Where(p => p.Nombre.ToLower().Contains(texto.ToLower()))
+                .ToList();
+
+            // Si no encontramos ningún producto
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("Producto no encontrado.");
+                txtBuscar.Focus();
+                return;
+            }
+
+            // Si encontramos productos, los mostramos
+            dvgProductos.DataSource = null;
+            dvgProductos.DataSource = lista;
+        }
     }
 }

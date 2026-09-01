@@ -63,6 +63,16 @@ namespace GestorProductos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _04130001_510x510 {
+            get {
+                object obj = ResourceManager.GetObject("04130001-510x510", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1170577 {
             get {
                 object obj = ResourceManager.GetObject("1170577", resourceCulture);
@@ -76,6 +86,26 @@ namespace GestorProductos.Properties {
         internal static System.Drawing.Bitmap _1312307 {
             get {
                 object obj = ResourceManager.GetObject("1312307", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5d2a31a45fc74da07ff366b3e44b421f {
+            get {
+                object obj = ResourceManager.GetObject("5d2a31a45fc74da07ff366b3e44b421f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c415eb404053c66acbbaf182ba202d2f {
+            get {
+                object obj = ResourceManager.GetObject("c415eb404053c66acbbaf182ba202d2f", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

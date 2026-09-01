@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnAgregar = new Button();
             label1 = new Label();
             txtNombre = new TextBox();
@@ -45,13 +50,19 @@
             labelErrorPrecio = new Label();
             labelErrorStock = new Label();
             lblContador = new Label();
-            pictureProductos = new PictureBox();
+            Bulldog = new PictureBox();
             btnEliminar = new Button();
             btnEditar = new Button();
             btnCancelar = new Button();
+            btnBuscar = new Button();
+            txtBuscar = new TextBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dvgProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Bulldog).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // btnAgregar
@@ -62,7 +73,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Algerian", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = Color.Black;
-            btnAgregar.Location = new Point(478, 88);
+            btnAgregar.Location = new Point(482, 88);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(148, 35);
             btnAgregar.TabIndex = 0;
@@ -73,11 +84,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Showcard Gothic", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(208, 30);
+            label1.Location = new Point(188, 33);
             label1.Name = "label1";
-            label1.Size = new Size(254, 33);
+            label1.Size = new Size(274, 36);
             label1.TabIndex = 1;
             label1.Text = "NUEVO PRODUCTO";
             // 
@@ -90,6 +101,7 @@
             txtNombre.PlaceholderText = "Nombre";
             txtNombre.Size = new Size(157, 23);
             txtNombre.TabIndex = 2;
+            txtNombre.TextAlign = HorizontalAlignment.Center;
             // 
             // txtStock
             // 
@@ -99,6 +111,7 @@
             txtStock.PlaceholderText = "Cantidad";
             txtStock.Size = new Size(127, 23);
             txtStock.TabIndex = 3;
+            txtStock.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPrecio
             // 
@@ -109,28 +122,48 @@
             txtPrecio.PlaceholderText = "Precio";
             txtPrecio.Size = new Size(127, 23);
             txtPrecio.TabIndex = 5;
+            txtPrecio.TextAlign = HorizontalAlignment.Center;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Snap ITC", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Desktop;
-            label2.Location = new Point(193, 179);
+            label2.Location = new Point(168, 168);
             label2.Name = "label2";
-            label2.Size = new Size(227, 22);
+            label2.Size = new Size(294, 27);
             label2.TabIndex = 6;
             label2.Text = "LISTA DE PRODUCTOS";
             // 
             // dvgProductos
             // 
-            dvgProductos.BackgroundColor = SystemColors.ActiveCaption;
+            dvgProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dvgProductos.BackgroundColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(128, 255, 128);
+            dataGridViewCellStyle5.Font = new Font("Sitka Text", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(128, 255, 128);
+            dataGridViewCellStyle5.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dvgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dvgProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvgProductos.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.PaleVioletRed;
+            dataGridViewCellStyle7.Font = new Font("Snap ITC", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dvgProductos.DefaultCellStyle = dataGridViewCellStyle7;
             dvgProductos.GridColor = Color.Black;
-            dvgProductos.Location = new Point(96, 213);
+            dvgProductos.Location = new Point(25, 213);
             dvgProductos.Name = "dvgProductos";
+            dataGridViewCellStyle8.BackColor = Color.HotPink;
+            dvgProductos.RowsDefaultCellStyle = dataGridViewCellStyle8;
             dvgProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dvgProductos.Size = new Size(442, 181);
+            dvgProductos.Size = new Size(520, 181);
             dvgProductos.TabIndex = 7;
             // 
             // Column1
@@ -155,6 +188,8 @@
             // Column4
             // 
             Column4.DataPropertyName = "Precio";
+            dataGridViewCellStyle6.Format = "$ #,##0";
+            Column4.DefaultCellStyle = dataGridViewCellStyle6;
             Column4.HeaderText = "PRECIO";
             Column4.Name = "Column4";
             // 
@@ -172,9 +207,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1170577;
-            pictureBox1.Location = new Point(520, 2);
+            pictureBox1.Location = new Point(584, 390);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(51, 76);
+            pictureBox1.Size = new Size(64, 68);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
@@ -226,16 +261,16 @@
             lblContador.TabIndex = 13;
             lblContador.Text = "0 PRODUCTOS";
             // 
-            // pictureProductos
+            // Bulldog
             // 
-            pictureProductos.Image = Properties.Resources._1312307;
-            pictureProductos.Location = new Point(388, 400);
-            pictureProductos.Name = "pictureProductos";
-            pictureProductos.Size = new Size(88, 50);
-            pictureProductos.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureProductos.TabIndex = 14;
-            pictureProductos.TabStop = false;
-            pictureProductos.Visible = false;
+            Bulldog.Image = Properties.Resources._04130001_510x510;
+            Bulldog.Location = new Point(386, 400);
+            Bulldog.Name = "Bulldog";
+            Bulldog.Size = new Size(96, 58);
+            Bulldog.SizeMode = PictureBoxSizeMode.Zoom;
+            Bulldog.TabIndex = 14;
+            Bulldog.TabStop = false;
+            Bulldog.Visible = false;
             // 
             // btnEliminar
             // 
@@ -245,7 +280,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(574, 213);
+            btnEliminar.Location = new Point(564, 259);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(97, 34);
             btnEliminar.TabIndex = 15;
@@ -261,7 +296,7 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = SystemColors.Menu;
-            btnEditar.Location = new Point(574, 265);
+            btnEditar.Location = new Point(564, 299);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(97, 37);
             btnEditar.TabIndex = 16;
@@ -277,7 +312,7 @@
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = SystemColors.Menu;
-            btnCancelar.Location = new Point(574, 320);
+            btnCancelar.Location = new Point(564, 342);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(97, 42);
             btnCancelar.TabIndex = 17;
@@ -286,16 +321,64 @@
             btnCancelar.Visible = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = Color.FromArgb(255, 128, 0);
+            btnBuscar.Cursor = Cursors.Hand;
+            btnBuscar.FlatStyle = FlatStyle.Flat;
+            btnBuscar.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBuscar.ForeColor = Color.Lavender;
+            btnBuscar.Location = new Point(564, 213);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(97, 40);
+            btnBuscar.TabIndex = 18;
+            btnBuscar.Text = "BUSCAR";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(555, 184);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "aca pone para buscar";
+            txtBuscar.Size = new Size(124, 23);
+            txtBuscar.TabIndex = 19;
+            txtBuscar.TextAlign = HorizontalAlignment.Center;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources._5d2a31a45fc74da07ff366b3e44b421f;
+            pictureBox2.Location = new Point(39, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(143, 79);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 20;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(468, 12);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(162, 79);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 21;
+            pictureBox3.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(691, 464);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(txtBuscar);
+            Controls.Add(btnBuscar);
             Controls.Add(btnCancelar);
             Controls.Add(btnEditar);
             Controls.Add(btnEliminar);
-            Controls.Add(pictureProductos);
+            Controls.Add(Bulldog);
             Controls.Add(lblContador);
             Controls.Add(labelErrorStock);
             Controls.Add(labelErrorPrecio);
@@ -314,7 +397,9 @@
             Text = "Gestion De Productos";
             ((System.ComponentModel.ISupportInitialize)dvgProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Bulldog).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -334,13 +419,17 @@
         private Label labelErrorPrecio;
         private Label labelErrorStock;
         private Label lblContador;
-        private PictureBox pictureProductos;
+        private PictureBox Bulldog;
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnCancelar;
+        private Button btnBuscar;
+        private TextBox txtBuscar;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }
